@@ -4,7 +4,7 @@ Project Description  An application to be written with Laravel should display th
 
 **Technical Requirements**  
 - The Node.js application will depend on MariaDB or MySQL. 
--Laravel application will not depend on any database. 
--AJAX or Fetch API can be used in the request to be made from the Laravel application.
--Bootstrap Table or DataTable (https://datatables.net/) can be used on the frontend.
--Database table name "customer" and base fields: "full_name", "email", "password", "birth_date", "is_deleted"
+- Laravel application will not depend on any database. 
+- AJAX or Fetch API can be used in the request to be made from the Laravel application.
+- Bootstrap Table or DataTable (https://datatables.net/) can be used on the frontend.
+- Database table name "customer" and base fields: "full_name", "email", "password", "birth_date", "is_deleted"
