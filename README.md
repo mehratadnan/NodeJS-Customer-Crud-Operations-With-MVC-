@@ -12,4 +12,4 @@ Project Description  An application to be written with Laravel should display th
 
 **Documentation** 
 - To start node js server write this command on terminal : node ./server.js
-- To try requests you can use customer requests in node js.postman_collection file which is will work on postman
+- To try requests you can use (customer requests in node js.postman_collection) file which is will work on postman
