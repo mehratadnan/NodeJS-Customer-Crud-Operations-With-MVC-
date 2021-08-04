@@ -1,0 +1,70 @@
+var db = require('../DAO/dbConnection');
+
+module.exports = class customer
+{
+    constructor(body)
+    {
+        this.customer = {};
+        if(body != undefined  ){
+            Object.entries(body).forEach(([key, value]) => {
+                this.customer[key] = value;
+            });
+        }
+    }
+
+    save() {
+        db.query("INSERT INTO customer SET ?", this.customer, function (err, result, fields) {
+            if (err)  throw err;
+        });
+    }
+
+    update() {
+        db.query("UPDATE customer SET ? where costumer_id = '"+this.customer.costumer_id+"'", this.customer, function (err, result, fields) {
+            if (err) throw err;
+        });
+    }
+
+    deleteAll(res) {
+        db.query("UPDATE customer SET is_deleted = '"+1+"' ", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  "customers deleted"});
+        });
+    }
+
+    reDeleteAll(res) {
+        db.query("UPDATE customer SET is_deleted = '"+0+"' ", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  "customers reDeleted"});
+        });
+    }
+
+    deleteOne(res) {
+        db.query("UPDATE customer SET is_deleted = '"+1+"' where costumer_id = '"+this.customer.costumer_id+"'", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  "customer deleted"});
+        });
+    }
+
+    reDeleteOne(res) {
+        db.query("UPDATE customer SET is_deleted = '"+0+"' where costumer_id = '"+this.customer.costumer_id+"'", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  "customer reDeleted"});
+        });
+    }
+
+    getCustomer(res) {
+        db.query("SELECT * FROM customer where costumer_id = '"+this.customer.costumer_id+"'", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  result});
+        });
+    }
+
+    getAllCustomer(res) {
+        db.query("SELECT * FROM customer", function (err, result, fields) {
+            if (err) throw err;
+            res.json({data:  result});
+        });
+    }
+
+
+}

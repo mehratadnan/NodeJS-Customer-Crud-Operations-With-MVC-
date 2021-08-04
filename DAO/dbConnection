@@ -1,0 +1,18 @@
+var mysql = require('../node_modules/mysql');
+
+//  create a connection to the database
+const connection  = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "niceye"
+});
+
+// check if connectoin is done 
+connection.connect(function(err) {
+    if (err) throw err;
+});
+
+module.exports = connection;
+
+
