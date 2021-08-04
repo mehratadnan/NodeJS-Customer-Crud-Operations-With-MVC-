@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "18929c50-5f02-4bdb-9bd2-b1ad64fe73be",
+		"name": "customer requests in node js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addNewCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "ammar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sassdasd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "3sdsdsdsdsdsd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/addNewCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"addNewCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "ammar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "qqqqqqqqqqqqqqqqs",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "22w23asdssssww",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "2020-10-10",
+							"type": "text"
+						},
+						{
+							"key": "is_deleted",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/updateCustomer/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"updateCustomer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/deleteAllCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"deleteAllCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reDeleteAllCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/re/deleteAllCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"re",
+						"deleteAllCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reDeleteCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/re/deleteCustomer/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"re",
+						"deleteCustomer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/deleteCustomer/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"deleteCustomer",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/getAllCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"getAllCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/getCustomer/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"getCustomer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
